@@ -32,11 +32,13 @@ public class LogoutActivity extends AppCompatActivity {
         textView1.setText("Name: "+prfName);
         textView2.setText("School: "+prfSchool);
 
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            SharedPreferences.Editor editor = preferences.edit();
+                editor.clear();
+                editor.apply();
+            }
+        });
     }
 }
